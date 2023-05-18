@@ -12,7 +12,7 @@ if __name__ == '__main__':
     msg['Subject'] = '"Sumary upload Around"'
     msg['From'] = 'alarmas-aws@vcmedios.com.co'
     msg['To'] = ['ingenieriavod@vcmedios.com.co']
-    conexion = smtplib.SMTP(host='10.10.122.17', port=25)
+    conexion = smtplib.SMTP(host='10.10.130.217', port=25)
     conexion.ehlo()
     conexion.send_message(msg)
     conexion.quit()
