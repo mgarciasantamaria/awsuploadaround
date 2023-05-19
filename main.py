@@ -48,8 +48,8 @@ if __name__ == '__main__':
                     json_data=json.load(json_file)
                 date_json=str(datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S'))
                 json_data[date_json]={
-                    "Total videos uploaded": {Counter},
-                    "Replace List": {Replace_list}
+                    "Total videos uploaded": Counter,
+                    "Replace List": Replace_list
                 }
                 with open(json_path, "w") as json_file:
                     json.dump(json_data, json_file)
