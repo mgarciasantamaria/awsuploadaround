@@ -51,7 +51,7 @@ if __name__ == '__main__':
                     "Total videos uploaded": {Counter},
                     "Replace List": {Replace_list}
                 }
-                with open(json_path, "r") as json_file:
+                with open(json_path, "w") as json_file:
                     json.dump(json_data, json_file)
                 text_log=f"Total videos uploaded: {Counter}\nReplace List {Replace_list}"
                 print(text_log)
