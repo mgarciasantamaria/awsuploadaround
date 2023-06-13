@@ -19,6 +19,7 @@ if __name__ == '__main__':
             Counter_Before=Counter
             FILES=os.listdir(source_Path)
             if FILES!=[]:
+                time.sleep(300)
                 for file in FILES:
                     print(f'File {file} Selected')
                     file_Path=f"{source_Path}/{file}"
@@ -61,13 +62,12 @@ if __name__ == '__main__':
             else:
                 text_log=f"Files not found"
                 print("File not found\n\t\t\tEnd\n")
-                time.sleep(300)
         except:
             error=sys.exc_info()[2]
             error_Info=traceback.format_tb(error)[0]
             text_log=f"Total videos uploaded: {Counter}\nReplace List {Replace_list}"
             print(text_log)
-            text_Mail=f"An error occurred while executing the awsupload application on the RUNAPPSPROD server (10.10.130.39)\nTraceback info: {error_Info}\nError_Info:{str(sys.exc_info()[1])}\n\n"+text_log
+            text_Mail=f"An error occurred while executing the awsupload application on the VODTRANSFERS3 server (10.10.130.39)\nTraceback info: {error_Info}\nError_Info:{str(sys.exc_info()[1])}\n\n"+text_log
             print(text_log)
             Send_Mail(text_Mail, "Error awsuploadaround")
             quit()
