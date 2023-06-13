@@ -62,6 +62,7 @@ if __name__ == '__main__':
             else:
                 text_log=f"Files not found"
                 print("File not found\n\t\t\tEnd\n")
+                time.sleep(300)
         except:
             error=sys.exc_info()[2]
             error_Info=traceback.format_tb(error)[0]
